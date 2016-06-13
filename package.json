@@ -1,0 +1,20 @@
+{
+  "name": "integris_calculator",
+  "version": "0.1.0",
+  "description": "A calculator that takes two imputs and preforms addition, subtraction, multiplication, or division based on selected operation",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CardinalWolsey/integris_calculator.git"
+  },
+  "author": "spencer.caldwell@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CardinalWolsey/integris_calculator/issues"
+  },
+  "homepage": "https://github.com/CardinalWolsey/integris_calculator#readme"
+}
