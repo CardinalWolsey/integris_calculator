@@ -4,9 +4,11 @@ var bodyParser = require('body-parser');
 var studentsRouter = module.exports = exports = express.Router();
 
 studentsRouter.post('/add', bodyParser.json(), function(req, res) {
-  var firstNum = req.body.first;
-  var secondNum = req.body.second;
+  console.log(req.body);
+  var firstNum = req.body.firstNumber;
+  var secondNum = req.body.secondNumber;
   var sum = firstNum + secondNum;
+  console.log(sum);
   res.json({number: sum});
 });
 
