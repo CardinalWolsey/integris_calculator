@@ -16,5 +16,24 @@
   "bugs": {
     "url": "https://github.com/CardinalWolsey/integris_calculator/issues"
   },
-  "homepage": "https://github.com/CardinalWolsey/integris_calculator#readme"
+  "homepage": "https://github.com/CardinalWolsey/integris_calculator#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "angular": "^1.5.6",
+    "angular-mocks": "^1.5.6",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-watch": "^4.3.6",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "mocha": "^2.5.3",
+    "phantomjs-prebuilt": "^2.1.7",
+    "webpack-stream": "^3.2.0"
+  }
 }
