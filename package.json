@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/CardinalWolsey/integris_calculator/issues"
   },
-  "homepage": "https://github.com/CardinalWolsey/integris_calculator#readme"
+  "homepage": "https://github.com/CardinalWolsey/integris_calculator#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
 }
