@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Integris Calculator</title>
+</head>
+<body>
+  <h1>Calculator</h1>
+  <p>Please select an operation and input two numbers</p>
+  <form name="calculatorForm">
+    <select>
+      <option value="add">Add</option>
+      <option value="subtract">Subtract</option>
+      <option value="multiply">Multiply</option>
+      <option value="divide">Divide</option>
+    </select>
+    <input type="number" id="firstNumber">
+    <input type="number" id="secondNumber">
+    <button type="submit" data-ng-disabled="calculatorForm.$invalid">Calculate</button>
+  </form>
+</body>
+</html>

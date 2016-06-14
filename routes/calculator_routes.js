@@ -4,17 +4,29 @@ var bodyParser = require('body-parser');
 var studentsRouter = module.exports = exports = express.Router();
 
 studentsRouter.post('/add', bodyParser.json(), function(req, res) {
-  //put adding functionality here and return sum
+  var firstNum = req.body.first;
+  var secondNum = req.body.second;
+  var sum = firstNum + secondNum;
+  res.json({number: sum});
 });
 
 studentsRouter.post('/subtract', bodyParser.json(), function(req, res) {
-  //put subtraction functionality here and return difference
+  var firstNum = req.body.first;
+  var secondNum = req.body.second;
+  var difference = firstNum - secondNum;
+  res.json({number: difference});
 });
 
 studentsRouter.post('/multiply', bodyParser.json(), function(req, res) {
-  //put multiplicaiton functionality here and return product
+  var firstNum = req.body.first;
+  var secondNum = req.body.second;
+  var product = firstNum * secondNum;
+  res.json({number: product});
 });
 
 studentsRouter.post('/divide', bodyParser.json(), function(req, res) {
-  //put division functionality here and return quotient
+  var firstNum = req.body.first;
+  var secondNum = req.body.second;
+  var quotient = firstNum / secondNum;
+  res.json({number: quotient});
 });
