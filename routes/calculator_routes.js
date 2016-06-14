@@ -13,22 +13,22 @@ studentsRouter.post('/add', bodyParser.json(), function(req, res) {
 });
 
 studentsRouter.post('/subtract', bodyParser.json(), function(req, res) {
-  var firstNum = req.body.first;
-  var secondNum = req.body.second;
+  var firstNum = req.body.firstNumber;
+  var secondNum = req.body.secondNumber;
   var difference = firstNum - secondNum;
   res.json({number: difference});
 });
 
 studentsRouter.post('/multiply', bodyParser.json(), function(req, res) {
-  var firstNum = req.body.first;
-  var secondNum = req.body.second;
+  var firstNum = req.body.firstNumber;
+  var secondNum = req.body.secondNumber;
   var product = firstNum * secondNum;
   res.json({number: product});
 });
 
 studentsRouter.post('/divide', bodyParser.json(), function(req, res) {
-  var firstNum = req.body.first;
-  var secondNum = req.body.second;
+  var firstNum = req.body.firstNumber;
+  var secondNum = req.body.secondNumber;
   var quotient = firstNum / secondNum;
   res.json({number: quotient});
 });
