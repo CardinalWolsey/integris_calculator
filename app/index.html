@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Integris Calculator</title>
+  <link rel="stylesheet" type="text/css" href="application.css">
 </head>
 <body data-ng-controller="CalculatorController">
   <h1>Calculator</h1>
@@ -22,7 +23,7 @@
     <button type="submit" data-ng-disabled="calculatorForm.$invalid">Calculate</button>
   </form>
 
-  <h2>Your result is: {{calculationResult}}</h2>
+  <h2 class="ng-cloak">Your result is: {{calculationResult}}</h2>
 
 <script src="bundle.js"></script>
 </body>

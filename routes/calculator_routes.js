@@ -4,15 +4,27 @@ var bodyParser = require('body-parser');
 var studentsRouter = module.exports = exports = express.Router();
 
 studentsRouter.post('/add', bodyParser.json(), function(req, res) {
-  console.log(req.body);
+  if(typeof req.body.firstNumber !== 'number') {
+    return res.status(500).json({error: 'please input a number'});
+  }
+  if(typeof req.body.secondNumber !== 'number') {
+    return res.status(500).json({error: 'please input a number'});
+  }
+
   var firstNum = req.body.firstNumber;
   var secondNum = req.body.secondNumber;
   var sum = firstNum + secondNum;
-  console.log(sum);
   res.json({number: sum});
 });
 
 studentsRouter.post('/subtract', bodyParser.json(), function(req, res) {
+  if(typeof req.body.firstNumber !== 'number') {
+    return res.status(500).json({error: 'please input a number'});
+  }
+  if(typeof req.body.secondNumber !== 'number') {
+    return res.status(500).json({error: 'please input a number'});
+  }
+
   var firstNum = req.body.firstNumber;
   var secondNum = req.body.secondNumber;
   var difference = firstNum - secondNum;
@@ -20,6 +32,13 @@ studentsRouter.post('/subtract', bodyParser.json(), function(req, res) {
 });
 
 studentsRouter.post('/multiply', bodyParser.json(), function(req, res) {
+  if(typeof req.body.firstNumber !== 'number') {
+    return res.status(500).json({error: 'please input a number'});
+  }
+  if(typeof req.body.secondNumber !== 'number') {
+    return res.status(500).json({error: 'please input a number'});
+  }
+
   var firstNum = req.body.firstNumber;
   var secondNum = req.body.secondNumber;
   var product = firstNum * secondNum;
@@ -27,6 +46,13 @@ studentsRouter.post('/multiply', bodyParser.json(), function(req, res) {
 });
 
 studentsRouter.post('/divide', bodyParser.json(), function(req, res) {
+  if(typeof req.body.firstNumber !== 'number') {
+    return res.status(500).json({error: 'please input a number'});
+  }
+  if(typeof req.body.secondNumber !== 'number') {
+    return res.status(500).json({error: 'please input a number'});
+  }
+
   var firstNum = req.body.firstNumber;
   var secondNum = req.body.secondNumber;
   var quotient = firstNum / secondNum;
