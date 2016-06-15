@@ -6,7 +6,6 @@ module.exports = function(app) {
       Calc.calculate($scope.calculation)
         .then(function(res) {
         $scope.calculationResult = res.data.number;
-        console.log(res.data.number);
       }, function(err) {
         console.log(err.data);
       });
