@@ -1,5 +1,7 @@
 var gulp = require('gulp');
 var webpack = require('webpack-stream');
+var sass = require('gulp-sass');
+var minifyCss = require('gulp-minify-css');
 
 gulp.task('static:dev', function() {
   gulp.src('app/**/*.html')
@@ -16,5 +18,12 @@ gulp.task('webpack:dev', function() {
     .pipe(gulp.dest('build/'));
 });
 
-gulp.task('build:dev', ['webpack:dev', 'static:dev']);
+gulp.task('sass:dev', function() {
+  gulp.src('app/sass/application.scss')
+  .pipe(sass().on('error', sass.logError))
+  .pipe(minifyCss())
+  .pipe(gulp.dest('build/'));
+});
+
+gulp.task('build:dev', ['webpack:dev', 'static:dev', 'sass:dev']);
 gulp.task('default', ['build:dev']);

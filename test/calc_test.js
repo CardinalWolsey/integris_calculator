@@ -9,7 +9,7 @@ describe('calculator routes', function() {
 
   //addition route
   it('the add route should add two numbers', function(done) {
-    var numberData = {first: 2, second: 3};
+    var numberData = {firstNumber: 3, secondNumber: 2};
     chai.request('localhost:3000')
       .post('/api/add')
       .send(numberData)
@@ -20,19 +20,19 @@ describe('calculator routes', function() {
       });
   });
   it('should error when numbers are not provided', function(done) {
-    var numberData = {first: 'a', second: 'b'};
+    var numberData = {firstNumber: 'b', secondNumber: 'a'};
     chai.request('localhost:3000')
       .post('/api/add')
       .send(numberData)
       .end(function(err, res) {
-        expect(err).to.eql('please input a number')
+        expect(res.body.error).to.eql('please input a number');
         done();
       })
   })
 
-  //subtraction routes
+  //subtraction route
   it('the subract route should subract two numbers', function(done) {
-    var numberData = {first: 5, second: 3};
+    var numberData = {firstNumber: 5, secondNumber: 3};
     chai.request('localhost:3000')
       .post('/api/subtract')
       .send(numberData)
@@ -43,19 +43,19 @@ describe('calculator routes', function() {
       });
   });
   it('should error when numbers are not provided', function(done) {
-    var numberData = {first: 'a', second: 'b'};
+    var numberData = {firstNumber: 'a', secondNumber: 'b'};
     chai.request('localhost:3000')
       .post('/api/subtract')
       .send(numberData)
       .end(function(err, res) {
-        expect(err).to.eql('please input a number')
+        expect(res.body.error).to.eql('please input a number');
         done();
       });
   });
 
-  //multiplication routes
+  //multiplication route
   it('the multiply route should multiply two numbers', function(done) {
-    var numberData = {first: 5, second: 3};
+    var numberData = {firstNumber: 5, secondNumber: 3};
     chai.request('localhost:3000')
       .post('/api/multiply')
       .send(numberData)
@@ -66,19 +66,19 @@ describe('calculator routes', function() {
       });
   });
   it('should error when numbers are not provided', function(done) {
-    var numberData = {first: 'a', second: 'b'};
+    var numberData = {firstNumber: 'a', secondNumber: 'b'};
     chai.request('localhost:3000')
       .post('/api/multiply')
       .send(numberData)
       .end(function(err, res) {
-        expect(err).to.eql('please input a number')
+        expect(res.body.error).to.eql('please input a number');
         done();
       });
   });
 
-  //division routes
+  //division route
   it('the divide route should divide two numbers', function(done) {
-    var numberData = {first: 6, second: 3};
+    var numberData = {firstNumber: 6, secondNumber: 3};
     chai.request('localhost:3000')
       .post('/api/divide')
       .send(numberData)
@@ -89,12 +89,12 @@ describe('calculator routes', function() {
       });
   });
   it('should error when numbers are not provided', function(done) {
-    var numberData = {first: 'a', second: 'b'};
+    var numberData = {firstNumber: 'a', secondNumber: 'b'};
     chai.request('localhost:3000')
       .post('/api/divide')
       .send(numberData)
       .end(function(err, res) {
-        expect(err).to.eql('please input a number')
+        expect(res.body.error).to.eql('please input a number');
         done();
       });
   });
