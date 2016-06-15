@@ -30,7 +30,7 @@ describe('calculator routes', function() {
       })
   })
 
-  //subtraction routes
+  //subtraction route
   it('the subract route should subract two numbers', function(done) {
     var numberData = {firstNumber: 5, secondNumber: 3};
     chai.request('localhost:3000')
@@ -53,7 +53,7 @@ describe('calculator routes', function() {
       });
   });
 
-  //multiplication routes
+  //multiplication route
   it('the multiply route should multiply two numbers', function(done) {
     var numberData = {firstNumber: 5, secondNumber: 3};
     chai.request('localhost:3000')
@@ -76,7 +76,7 @@ describe('calculator routes', function() {
       });
   });
 
-  //division routes
+  //division route
   it('the divide route should divide two numbers', function(done) {
     var numberData = {firstNumber: 6, secondNumber: 3};
     chai.request('localhost:3000')

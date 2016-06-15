@@ -3,7 +3,6 @@ var webpack = require('webpack-stream');
 var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 
-
 gulp.task('static:dev', function() {
   gulp.src('app/**/*.html')
   .pipe(gulp.dest('build/'));

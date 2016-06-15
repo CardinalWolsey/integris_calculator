@@ -5,21 +5,26 @@
   <title>Integris Calculator</title>
   <link rel="stylesheet" type="text/css" href="application.css">
 </head>
+
 <body data-ng-controller="CalculatorController">
   <h1>Calculator</h1>
   <p>Please select an operation and input two numbers</p>
-  <form name="calculatorForm" data-ng-submit="calculate(calculation)">
+
+  <form name="calculatorForm" data-ng-submit="calculate()">
     <label for="operationSelect">Select Operation:</label>
-    <select id="operationSelect" data-ng-model="calculation.operation">
+    <select id="operationSelect" data-ng-model="calculation.operation" required>
       <option value="add">Add</option>
       <option value="subtract">Subtract</option>
       <option value="multiply">Multiply</option>
       <option value="divide">Divide</option>
     </select>
+
     <label for="firstNumber">First Number:</label>
     <input type="number" id="firstNumber" required data-ng-model="calculation.firstNumber">
+
     <label for="secondNumber">Second Number:</label>
     <input type="number" id="secondNumber" required data-ng-model="calculation.secondNumber">
+
     <button type="submit" data-ng-disabled="calculatorForm.$invalid">Calculate</button>
   </form>
 
